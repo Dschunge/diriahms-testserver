@@ -1,0 +1,14 @@
+services:
+  nestjs-api:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "3100:3100"
+    networks:
+      - postgres
+ 
+networks:
+  postgres:
+    driver: bridge
